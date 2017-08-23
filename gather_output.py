@@ -80,7 +80,6 @@ def concatenate_reads(mask='', out='.'):
             print('adding file %s'%fastq_file)
             for read in SeqIO.parse(fastq_file, 'fastq'):
                 SeqIO.write(read, ofile, 'fastq')
-                read_lengths.append(len(read.seq))
                 l_read = len(read.seq)
                 read_lengths.append(l_read)
                 if l_read>top_reads[0][0]:
