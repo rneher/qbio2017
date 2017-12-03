@@ -1,0 +1,129 @@
+%\documentclass[12pt]{article}
+\documentclass[aps,rmp]{revtex4}
+
+\usepackage{times}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{color}
+\usepackage{hyperref}
+%\usepackage{natbib}
+\newcommand{\bm}[1]{\mbox{\boldmath $#1$}}
+\newcommand{\EQ}[1]{Eq.~(\ref{eq:#1})}
+\newcommand{\EQS}[2]{Eqs.~(\ref{eq:#1)} and (\ref{eq:#2})}
+\newcommand{\FIG}[1]{Fig.~\ref{fig:#1}}
+\newcommand{\TAB}[1]{Tab.~\ref{tab:#1}}
+\newcommand{\REF}[1]{ref.~\cite{#1}}
+
+
+\begin{document}
+\title{Ligation barcoding: step by step}
+
+\maketitle
+
+For DNA obtained from the University Hospital Basel, start with A-tailing. Their concentration measurements can be be trusted. Fragmentation, end-repair, bead-clean up and qubit can be skipped.
+
+\section*{Prepare}
+\begin{itemize}
+	\item 70\% Ethanol needed for bead clean-up: $4n\times 200\mu l$ + some extra. prepare fresh.
+	\item Qubit solution: at least $2n+5$ reactions ($200\mu l $ each)
+	\item Switch on heat block
+\end{itemize}
+
+\section*{A-tailing}
+\begin{itemize}
+	\item Required for each sample: 1000ng DNA in 50$\mu l$ nuclease free water
+	\item Add: $7\mu l$ Ultra II End-prep buffer	(green cap)
+	\item Add: $3\mu l$ Ultra II End-prep enzyme mix (green cap)
+	\item mix by inversion (or gentle pipetting), spin down
+	\item 5min at RT
+	\item 5min at 65C (heat block can be switched off now)
+\end{itemize}
+
+\section*{Clean-up}
+{\bf resuspend the beads by vortexing. use an aliquot at RT}.
+\begin{itemize}
+	\item Add $60\mu l$ of beads
+	\item mix and incubate 5min on rotator
+	\item pellet on magnet, remove supernatant
+	\item add $200\mu l$ of 70\% ethanol. keep on magnet, don't resuspend.
+	\item remove ethanol, repeat ethanol wash.
+	\item spin down, remove residual wash, let pellet air-dry (a few minutes)
+	\item label new set of tubes.
+	\item add $25\mu l$ NFW, resuspend pellet, incubate 2min
+	\item transfer eluate to fresh tube.
+	\item use $1\mu l$ for qubit. (aim 700ng, 500ng more typical)
+\end{itemize}
+
+\section*{Barcode ligation}
+{\bf Thaw the barcodes. I sometimes thaw them by turning them up-side down and filling the hollow tube with (cold) water. Add barcodes to sample sheet}.
+\begin{itemize}
+	\item dilute DNA to 500ng/$22\mu l$. Or just use of all of it if within 400-600ng
+	\item add $2.5\mu l$ barcode
+	\item add $25\mu l$ TA ligase
+	\item mix by inversion, spin down, incubate at RT for 10 min
+\end{itemize}
+
+\section*{Clean up}
+{\bf  Note: pellet is typically diffuse at this step}
+\begin{itemize}
+	\item Add $60\mu l$ of beads
+	\item mix and incubate 5min on rotator
+	\item pellet on magnet, remove supernatant
+	\item add $200\mu l$ of 70\% ethanol. keep on magnet, don't resuspend.
+	\item remove ethanol, repeat ethanol wash.
+	\item spin down, remove residual wash, let pellet air-dry (a few minutes)
+	\item label new set of tubes.
+	\item add $25\mu l$ NFW, resuspend pellet, incubate 2min
+	\item transfer eluate to fresh tube.
+	\item use $1\mu l$ for qubit. (aim 15ng/$\mu l$, 10 more typical)
+\end{itemize}
+{\bf Pool samples to obtain $700ng/51\mu l$. If too dilute, additional bead clean up}.
+
+\section*{conditional: additional clean-up}
+\begin{itemize}
+	\item Pool sample to have at least 1200ng DNA in pool with even representation.
+	\item Add the same volume of beads
+	\item mix and incubate 5min on rotator
+	\item pellet on magnet, remove supernatant
+	\item add $200\mu l$ of 70\% ethanol. keep on magnet, don't resuspend.
+	\item remove ethanol, repeat ethanol wash.
+	\item spin down, remove residual wash, let pellet air-dry (a few minutes)
+	\item add $51\mu l$ NFW, resuspend pellet, incubate 2min
+	\item transfer eluate to fresh tube.
+	\item use $1\mu l$ for qubit. (needs to be at 15ng/$\mu l$, 20-30 more typical)
+	\item dilute in fresh tube to obtain $700ng/51\mu l$
+\end{itemize}
+
+
+\section*{Adapter ligation}
+{\bf we use a different ligase than in the ONT protocol}
+\begin{itemize}
+	\item add $20\mu l$ of BAM
+	\item add $30\mu l$ Ultra II ligase master mix  (red cap)
+	\item add $1\mu l$ Ultra II enhancer (red cap)
+	\item mix thoroughly by gentle pipetting
+	\item RT for 10 min
+\end{itemize}
+
+
+\section*{ABB bead clean-up}
+{\bf Note the odd bead volume, but it works...}
+\begin{itemize}
+	\item Add $40\mu l$ of beads
+	\item mix by pipetting and incubate 5min on rotator
+	\item pellet on magnet, remove supernatant
+	\item add $140\mu l$ of ABB. RESUSPEND by flicking (or gentle vortex).
+	\item repeat
+\end{itemize}
+
+\section*{recover library}
+\begin{itemize}
+	\item resuspend in $15\mu l$ ELB.
+	\item Incubate 10min at RT
+	\item (prepare the minION)
+	\item pellet on magnet, remove supernatent into FRESH TUBE
+	\item qubit with $1\mu l$ $~200ng$.
+	\item store library on ice
+\end{itemize}
+
+\end{document}
