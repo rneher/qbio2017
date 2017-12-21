@@ -27,6 +27,8 @@ For DNA obtained from the University Hospital Basel, start with A-tailing. Their
 	\item 70\% Ethanol needed for bead clean-up: $4n\times 200\mu l$ + some extra. prepare fresh.
 	\item Qubit solution: at least $2n+5$ reactions ($200\mu l $ each)
 	\item Switch on heat block
+	\item Get aliquot of NFW if not at bench.
+	\item Get bucket of ice.
 \end{itemize}
 
 \section*{A-tailing}
@@ -43,7 +45,7 @@ For DNA obtained from the University Hospital Basel, start with A-tailing. Their
 {\bf resuspend the beads by vortexing. use an aliquot at RT}.
 \begin{itemize}
 	\item Add $60\mu l$ of beads
-	\item mix and incubate 5min on rotator
+	\item mix and incubate 5min on rotator. briefly spin to collect any droplets from lid
 	\item pellet on magnet, remove supernatant
 	\item add $200\mu l$ of 70\% ethanol. keep on magnet, don't resuspend.
 	\item remove ethanol, repeat ethanol wash.
@@ -66,8 +68,8 @@ For DNA obtained from the University Hospital Basel, start with A-tailing. Their
 \section*{Clean up}
 {\bf  Note: pellet is typically diffuse at this step}
 \begin{itemize}
-	\item Add $60\mu l$ of beads
-	\item mix and incubate 5min on rotator
+	\item Add $60\mu l$ of AmpXP beads
+	\item mix and incubate 5min on rotator. briefly spin to collect any droplets from lid
 	\item pellet on magnet, remove supernatant
 	\item add $200\mu l$ of 70\% ethanol. keep on magnet, don't resuspend.
 	\item remove ethanol, repeat ethanol wash.
@@ -79,10 +81,10 @@ For DNA obtained from the University Hospital Basel, start with A-tailing. Their
 \end{itemize}
 {\bf Pool samples to obtain $700ng/51\mu l$. If too dilute, additional bead clean up}.
 
-\section*{conditional: additional clean-up}
+\section*{Conditional: additional clean-up}
 \begin{itemize}
 	\item Pool sample to have at least 1200ng DNA in pool with even representation.
-	\item Add the same volume of beads
+	\item Add the same volume of AmpXP beads
 	\item mix and incubate 5min on rotator
 	\item pellet on magnet, remove supernatant
 	\item add $200\mu l$ of 70\% ethanol. keep on magnet, don't resuspend.
@@ -101,7 +103,7 @@ For DNA obtained from the University Hospital Basel, start with A-tailing. Their
 	\item add $20\mu l$ of BAM
 	\item add $30\mu l$ Ultra II ligase master mix  (red cap)
 	\item add $1\mu l$ Ultra II enhancer (red cap)
-	\item mix thoroughly by gentle pipetting
+	\item mix thoroughly by gentle pipetting. Use P200
 	\item RT for 10 min
 \end{itemize}
 
@@ -109,14 +111,14 @@ For DNA obtained from the University Hospital Basel, start with A-tailing. Their
 \section*{ABB bead clean-up}
 {\bf Note the odd bead volume, but it works...}
 \begin{itemize}
-	\item Add $40\mu l$ of beads
+	\item Add $40\mu l$ of AmpXP beads
 	\item mix by pipetting and incubate 5min on rotator
 	\item pellet on magnet, remove supernatant
 	\item add $140\mu l$ of ABB. RESUSPEND by flicking (or gentle vortex).
 	\item repeat
 \end{itemize}
 
-\section*{recover library}
+\section*{Recover library}
 \begin{itemize}
 	\item resuspend in $15\mu l$ ELB.
 	\item Incubate 10min at RT
@@ -124,6 +126,19 @@ For DNA obtained from the University Hospital Basel, start with A-tailing. Their
 	\item pellet on magnet, remove supernatent into FRESH TUBE
 	\item qubit with $1\mu l$ $~200ng$.
 	\item store library on ice
+\end{itemize}
+
+\section*{Run Prep}
+\begin{itemize}
+	\item Prepare priming buffer (PB): 480 $\mu l$ RBF and 520 $\mu l$ NFW in Eppendorf 
+	\item Prepare library for loading: Mix 35 $\mu l$ RBF + 25.5 $\mu l$ LLB (library loading beads) + 12 $\mu l$ of library + 2.5 $\mu l $ NFW in clean Eppendorf
+	\item Prime flow cell: Open the sample port by swinging the gate open. Draw a trace amount of yellow fluid from region using the screw of P1000. Discard. Load 800 $\mu $ of PB.
+	\item Wait 5 minutes
+	\item Lift spot on port.
+	\item Load remaining 200 $\mu l$ of PB
+	\item Drop your library into the spot on port. DROP BY DROP WITHOUT TOUCHING
+	\item Start sequencing. Log run statistics.
+	\item Modify paths within Albacore scripts. Run basecalling.
 \end{itemize}
 
 \end{document}
